@@ -26,7 +26,7 @@ public class SecurityConfig {
                 .formLogin(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        // Allow open access to Swagger UI, OpenAPI docs, and endpoints in Module 1
+                        // Permit Swagger UI, OpenAPI docs, and all basic application endpoints in Module 1 & 2
                         .requestMatchers(
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
